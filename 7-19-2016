@@ -1,0 +1,73 @@
+what makes the functional style?
+
+functions are first class citizens:
+can be set as values to variables.
+
+what characterizes the functional style?
+purity.
+loose coupling.
+few (none, really) state changes.
+higher reducibility - even "if" can be a function.
+
+
+
+
+Purity and coupling:
+
+http sessions.
+outlook config files.
+DOM Manipulation - this is why separation of concerns was born.
+
+side effects:
+a function or expression is said to have a side effect
+if it modifies some state or has an observable interaction with calling functions or variables.
+
+functional is enlightened:
+
+its cool.
+its challenging.
+its pretty: Peano vs von neumann, haskell vs. java.
+
+
+
+a self redefining incrementor:
+
+var incrementor = function (){
+	var start = 0;
+	incrementor = function(){
+	  return start++;
+	}
+return incrementor()
+
+}
+
+var curriedmax = function(a){
+	return function(b){
+
+   	}
+}
+
+
+
+var maxtwo = curriedmax (8)(10) //
+
+
+
+
+how to join letters and provide the first letter of a string:
+
+var sentence = "hello, is it me you're looking for?"
+var i2 = sentence.split(" ").map(function(a){
+	return a[0].toUpperCase() + a.substring(1);
+}).join(" ");
+
+**.join(" ") means that you are joining the words with spaces.
+
+
+filtering:
+
+var names = ["Helen Anderson, Jeff, Ally, Jan, Daria"];
+		names.filter( name => name >5);
+
+
+	
